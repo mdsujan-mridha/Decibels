@@ -90,11 +90,13 @@ const Home = () => {
             </div>
 
             <div className="last-section">
-                <div className="last-section-img">
+                <div className="container">
+                 <div className="row">
+                 <div className="col-12 col-md-6 col-lg-6 last-section-img">
                     <img src= {lastSectionImg} alt="" />
 
                 </div>
-                <div className="last-section-text-part">
+                <div className="col-12 col-md-6 col-lg-6 last-section-text-part">
                     <h1> 
                     Being first has its perks
 
@@ -104,9 +106,11 @@ const Home = () => {
 
                     </p>
                     <div className="input-and-btn">
-                        <input type="email" name="email" id="1" />
-                        <input type="submit" value="SIGN IN" />
+                        <input className='input-email' type="email" name="email" id="1" placeholder='Enter your mail'/>
+                        <input className='input-submit' type="submit" value="SIGN IN" />
                     </div>
+                </div>
+                 </div>
                 </div>
             </div>
 

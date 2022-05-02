@@ -184,11 +184,57 @@ text-align: left;
 .last-section{
 height: 520px;
 width: auto;
-display: flex;
-align-items: center;
 background: #191919;
 color: #fff;
-margin-bottom: 0px;
-padding-bottom: 100px;
+ margin-bottom: 0px;
  margin-top: 150px;
+}
+.last-section-img{
+    margin-top: -150px;
+}
+.last-section-text-part{
+    margin-top: 150px;
+}
+.last-section-text-part h1{
+    width: 461px;
+    font-family: Gotham;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+    
+}
+.last-section-text-part p{
+    width: 461px;
+    font-family: Gotham;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left; 
+}
+.last-section-text-part .input-email{
+    height: 48px;
+    width: 255px;
+    left: 736px;
+    top: 5665px;
+    border-radius: 50px;
+    
+}
+.last-section-text-part .input-submit{
+    height: 48px;
+    width: 190px;
+    left: 1007px;
+    top: 5665px;
+    border-radius: 50px;
+font-family: Gotham;
+font-size: 18px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+    
 }
