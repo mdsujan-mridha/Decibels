@@ -78,22 +78,24 @@
 }
 
 
-.perfect-sound-section{
+.perfect-sound-section {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .perfectSectionImg {
     width: 452px;
     height: 600px;
     border-radius: 10px;
-  
+
 }
 
-.perfect-txt-part{
+.perfect-txt-part {
     margin-left: 0px;
     margin-top: 160px;
     text-align: justify;
 }
+
 .perfect-txt-part h1 {
     font-family: Gotham;
     font-size: 64px;
@@ -103,6 +105,7 @@
     text-align: left;
 
 }
+
 .perfect-txt-part p {
     font-family: Gotham;
     font-size: 18px;
@@ -110,6 +113,82 @@
     line-height: 29px;
     letter-spacing: 0em;
     text-align: justify;
-    
+}
 
+.Premium-section {
+    margin-top: 150px;
+}
+
+.Premium-section h1 {
+    font-family: Gotham;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+
+
+}
+
+.Premium-section p {
+    width: 558px;
+    height: 120px;
+    margin-left: 353px;
+    font-family: Gotham;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 25px;
+
+
+}
+
+.premimu-img-section .premium-img {
+    height: 950px;
+    width: 950px;
+    margin-left: 245px;
+    margin-top: 100px;
+
+
+}
+.battery-life-section{
+    margin-top: 150px;
+}
+.battery-txt-part {
+  margin-top: 160px;
+}
+.battery-txt-part h1{
+font-family: Gotham;
+width: 543px;
+font-size: 64px;
+font-weight: 700;
+line-height: 72px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.battery-txt-part p{
+    width: 558px;
+    font-family: Gotham;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.batterySectionImg{
+  width: 616px;
+ height: 600px;
+}
+.last-section{
+height: 520px;
+width: auto;
+display: flex;
+align-items: center;
+background: #191919;
+color: #fff;
+margin-bottom: 0px;
+padding-bottom: 100px;
+ margin-top: 150px;
 }

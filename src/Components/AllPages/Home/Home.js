@@ -2,7 +2,10 @@ import React from 'react';
 import './Home.css'
 import bannerbg from '../../../images/banner-bg.png';
 import bannerItem from '../../../images/banner-item.png';
-import prfectSectionImg from '../../../images/perfect.png'
+import prfectSectionImg from '../../../images/perfect.png';
+import premiumSectionImg from '../../../images/bose_759944_0020_quietcomfort_35_acoustic_noise_1250648_1_ 1.png';
+import battertySectionImg from '../../../images/guy 1.png';
+import lastSectionImg from '../../../images/last.png'
 
 const Home = () => {
     return (
@@ -41,6 +44,72 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="Premium-section">
+                <div className="container">
+                    <div className="Premium-text-part">
+                        <h1 className="text-center">
+                            Premium design
+                        </h1>
+                        <p>
+                            When you want to take your music anywhere, you need headphones built to keep up. With impact-resistant materials, glass-filled nylon, and corrosion-resistant stainless steel, they’re engineered to survive life on the go.
+
+                        </p>
+                    </div>
+                    <div className="premimu-img-section">
+                        <img className='premium-img' src={premiumSectionImg} alt="" />
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div className="battery-life-section">
+                <div className="container">
+                    <div className="row">
+
+
+                    <div className="col-12 col-md-6 col-lg-6 battery-txt-part">
+                            <h1>
+                                 Up to 20 hours battery life
+                            </h1>
+                            <p>
+                            Enjoy up to 20 hours of listening, enough time to pore through this entire playlist. So you can keep the music — or the quiet — going all day long. And when it finally runs down, a quick 15-minute charge gives you another 2.5 hours. 
+                            </p>
+                        </div>
+
+
+
+                        <div className="col-12 col-md-6 col-lg-6 battery-img-part">
+                            <img className='batterySectionImg' src={battertySectionImg} alt="" />
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div className="last-section">
+                <div className="last-section-img">
+                    <img src= {lastSectionImg} alt="" />
+
+                </div>
+                <div className="last-section-text-part">
+                    <h1> 
+                    Being first has its perks
+
+                    </h1>
+                    <p>
+                    Sign up to get more information about Bose, exclusive first looks at promotions, new products and more.
+
+                    </p>
+                    <div className="input-and-btn">
+                        <input type="email" name="email" id="1" />
+                        <input type="submit" value="SIGN IN" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };
