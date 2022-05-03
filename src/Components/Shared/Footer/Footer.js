@@ -38,6 +38,8 @@ const Footer = () => {
                             <Link to='/https://twitter.com'>  <FontAwesomeIcon icon={faTwitter} size="2x" /> </Link>
                             <Link to='/https://instagram.com'>  <FontAwesomeIcon icon={faInstagram} size="2x" /> </Link>
                         </div>
+                        <input className='email-field' type="email" name="email" id="" placeholder='E-mail' />
+                        <input className='subx-btn' type="submit" value="Subscribe us" />
                     </div>
                 </div>
                 <div className="copy-right">

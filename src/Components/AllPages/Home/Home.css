@@ -235,6 +235,13 @@ font-weight: 700;
 line-height: 24px;
 letter-spacing: 0em;
 text-align: center;
+transition: 0.3s;
 
+    
+}
+.input-submit:hover{
+    border: 2px solid  #fff;
+    background: transparent;
+    color:#fff;
     
 }

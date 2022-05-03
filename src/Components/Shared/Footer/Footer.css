@@ -72,6 +72,7 @@
 }
 
 .copy-right {
+    margin-top: 150px;
     padding: 5px;
 
 
@@ -81,6 +82,32 @@
     font-size: 16px;
     color: #fff;
     opacity: 0.6;
+ 
 
 
+}
+.right-corner .email-field{
+
+   width: 280px;
+   height: 50px;
+   margin-top: 50px;
+   border: none;
+   border-radius: 20px;
+}
+.right-corner .subx-btn{
+  
+    margin-left: 10px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background: orangered;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+
+}
+.subx-btn:hover{
+    background: transparent;
+    border: 2px solid #fff;
 }
