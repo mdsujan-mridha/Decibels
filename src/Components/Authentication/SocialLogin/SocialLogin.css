@@ -20,7 +20,27 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    background: #191919;
+    opacity: 0.8;
+    color: #fff;
+
+}
+ .google-login:hover{
+    opacity: 1.0;
+}
+
+.github-login:hover{
+    opacity: 1.0;
 }
 .social-login  .google-login .img, svg{
     margin-right: 8px;
+}
+.errorHandle{
+    margin-left: 5%;
+    color: red;
+    font-size: 17px;
+    font-weight: 600;
+}
+.loadingHandle{
+    text-align: center;
 }
