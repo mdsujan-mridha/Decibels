@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Login.css';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     return (
@@ -15,11 +16,13 @@ const Login = () => {
                             <input className='password-field' type="password" name="password" id="2" placeholder='Enter Password' />
                             <p> Forgot your password? </p>
                             <input className='login-btn' type="submit" value="Login" />
-                            <hr className="new1" />
+                            <hr className="new1"/>
                         </form>
                     </div>
 
                     <p> Create a new account </p>
+                    <hr className="new1"/> 
+                    <SocialLogin></SocialLogin>
 
                 </div>
             </div>
