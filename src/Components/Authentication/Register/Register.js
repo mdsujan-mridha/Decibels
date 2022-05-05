@@ -32,6 +32,7 @@ const Register = () => {
         const passowrd = passwordRef.current.value;
         createUserWithEmailAndPassword(email,passowrd);
         
+        
     }
 
 
@@ -67,9 +68,9 @@ if(loading){
                         <form onSubmit={handleRegisterSubmit}>
                             <h1 className="text-center mt-5 mb-5"> Register </h1>
                             <input ref={nameRef} className='email-field' type="name" name="name" id="2" placeholder='Enter your name' />
-                            <input ref={emailRef} className='email-field' type="email" name="email" id="1" placeholder='Enter Email @gmail.com' />
+                            <input ref={emailRef} className='email-field' type="email" name="email" id="1" placeholder='Enter Email @gmail.com' required/>
                             
-                            <input ref={passwordRef} className='password-field' type="password" name="password" id="3" placeholder='Enter Password' />
+                            <input ref={passwordRef} className='password-field' type="password" name="password" id="3" placeholder='Enter Password' required/>
 
                             <input className='login-btn' type="submit" value="Signup" />
                             <hr className="new1" />

@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useProducts from '../CustomHooks/UseProducts';
 import Product from '../Product/Product';
 import './Products.css';
 
 const Products = () => {
-    const[products,setProducts]=useState([]);
-     useEffect( ()=>{
+    const[products,setProduct] = useProducts();
+   
 
-           fetch('http://localhost:5000/product')
-           .then(res => res.json())
-           .then(data =>setProducts(data))   
-
-     } ,[]);
     return (
         <div>
             <div className="products-container">

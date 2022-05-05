@@ -7,7 +7,7 @@ import Home from './Components/AllPages/Home/Home';
 import Login from './Components/Authentication/Login';
 import Register from './Components/Authentication/Register/Register';
 import Products from './Components/Products/Products';
-
+import AddNewProduct from './Components/AddNewProduct/AddNewProduct';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
        <Route path='/products' element={<Products></Products>}></Route>
+       <Route path='addproduct' element={<AddNewProduct></AddNewProduct>}></Route>
 
         </Routes>
          

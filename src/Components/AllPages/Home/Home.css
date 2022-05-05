@@ -245,3 +245,21 @@ transition: 0.3s;
     color:#fff;
     
 }
+.load-products .load-all-product{
+
+    font-size: 19px;
+    text-decoration: none;
+    width: 300px;
+    height: 48px;
+    background: #191919;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    opacity: 0.9;
+    
+}
+.load-all-product:hover{
+    opacity: 1.0;
+}

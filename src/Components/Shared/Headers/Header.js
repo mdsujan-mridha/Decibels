@@ -23,6 +23,12 @@ const Header = () => {
     <Nav className="me-auto">
       <Nav.Link as = {NavLink} to="home" > Home </Nav.Link>
       <Nav.Link as = {NavLink} to="products" > Product </Nav.Link>
+      {
+        user?
+        <Nav.Link as = {NavLink} to="addproduct" > Add New Product </Nav.Link>
+        :
+        ''
+      }
      
       
     </Nav>

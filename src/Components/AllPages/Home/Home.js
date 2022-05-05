@@ -7,8 +7,13 @@ import premiumSectionImg from '../../../images/bose_759944_0020_quietcomfort_35_
 import battertySectionImg from '../../../images/guy 1.png';
 import lastSectionImg from '../../../images/last.png'
 import Products from '../../Products/Products';
+import useProducts from '../../CustomHooks/UseProducts';
+import Product from '../../Product/Product';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const [products, setProduct] = useProducts();
+    const splice = products.slice(products, 6);
     return (
         <div>
             <div className="banner-section">
@@ -46,8 +51,24 @@ const Home = () => {
                 </div>
             </div>
 
-           <Products></Products>
-      
+            <div>
+                <div className="products-container">
+                    <div className="container">
+                        <h1 className='text-center products-title'> Our All Products {products.length}  </h1>
+                        <div className="load-products">
+                            {
+                                splice.map(product => <Product
+                                    key={product._id}
+                                    product={product}
+                                ></Product>)
+                            }
+                            <Link className='load-all-product' to="/products">   Manage Inventories   </Link>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="Premium-section">
                 <div className="container">
                     <div className="Premium-text-part">
@@ -73,12 +94,12 @@ const Home = () => {
                     <div className="row">
 
 
-                    <div className="col-12 col-md-6 col-lg-6 battery-txt-part">
+                        <div className="col-12 col-md-6 col-lg-6 battery-txt-part">
                             <h1>
-                                 Up to 20 hours battery life
+                                Up to 20 hours battery life
                             </h1>
                             <p>
-                            Enjoy up to 20 hours of listening, enough time to pore through this entire playlist. So you can keep the music — or the quiet — going all day long. And when it finally runs down, a quick 15-minute charge gives you another 2.5 hours. 
+                                Enjoy up to 20 hours of listening, enough time to pore through this entire playlist. So you can keep the music — or the quiet — going all day long. And when it finally runs down, a quick 15-minute charge gives you another 2.5 hours.
                             </p>
                         </div>
 
@@ -87,33 +108,33 @@ const Home = () => {
                         <div className="col-12 col-md-6 col-lg-6 battery-img-part">
                             <img className='batterySectionImg' src={battertySectionImg} alt="" />
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
 
             <div className="last-section">
                 <div className="container">
-                 <div className="row">
-                 <div className="col-12 col-md-6 col-lg-6 last-section-img">
-                    <img src= {lastSectionImg} alt="" />
+                    <div className="row">
+                        <div className="col-12 col-md-6 col-lg-6 last-section-img">
+                            <img src={lastSectionImg} alt="" />
 
-                </div>
-                <div className="col-12 col-md-6 col-lg-6 last-section-text-part">
-                    <h1> 
-                    Being first has its perks
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6 last-section-text-part">
+                            <h1>
+                                Being first has its perks
 
-                    </h1>
-                    <p>
-                    Sign up to get more information about Bose, exclusive first looks at promotions, new products and more.
+                            </h1>
+                            <p>
+                                Sign up to get more information about Bose, exclusive first looks at promotions, new products and more.
 
-                    </p>
-                    <div className="input-and-btn">
-                        <input className='input-email' type="email" name="email" id="1" placeholder='Enter your mail'/>
-                        <input className='input-submit' type="submit" value="SIGN IN" />
+                            </p>
+                            <div className="input-and-btn">
+                                <input className='input-email' type="email" name="email" id="1" placeholder='Enter your mail' />
+                                <input className='input-submit' type="submit" value="SIGN IN" />
+                            </div>
+                        </div>
                     </div>
-                </div>
-                 </div>
                 </div>
             </div>
 

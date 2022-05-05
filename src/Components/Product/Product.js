@@ -26,7 +26,9 @@ const Product = ({product}) => {
                    <h3 className='product-quantity'> Quantity: {quantity} </h3>
                    <h3 className="product-price"> Price: {price} </h3>
                 <h4 className='product-suplier'>  Supplier:{supplier} </h4>
+               
                     </div>
+                    <button className='product-update'> Update </button>
 
                </div>
            </div>
