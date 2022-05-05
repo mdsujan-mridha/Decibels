@@ -3,7 +3,7 @@ import './Product.css'
 
 const Product = ({product}) => {
     console.log(product);
-    const{name,img,quantity,description,supplier}= product;
+    const{name,img,quantity,description,supplier,price}= product;
     const[readMore,setReadMore] = useState(true);
     const toggleReadMore = () => {setReadMore(!readMore)};
 
@@ -11,7 +11,7 @@ const Product = ({product}) => {
         <div>
            <div className="product-cart">
                <div className="card">
-                   <img className='product-img' src={img} alt="product-1" />
+                   <img className='product-img' src={img} alt="product" />
                     <div className="card-container">
                     <h2 className='product-name'> Name: {name} </h2>
                    <p className='product-description'> 
@@ -24,6 +24,7 @@ const Product = ({product}) => {
                          }
                       </p>
                    <h3 className='product-quantity'> Quantity: {quantity} </h3>
+                   <h3 className="product-price"> Price: {price} </h3>
                 <h4 className='product-suplier'>  Supplier:{supplier} </h4>
                     </div>
 

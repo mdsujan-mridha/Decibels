@@ -1,13 +1,66 @@
 .card{
 width: 300px;
-height: 510px;
+height: 550px;
 box-shadow: 2px 2px 4px 4px rgb(195, 193, 193);
+transition: 0.3s;
 
+}
+.card:hover{
+  background: #191919;
+  opacity: 0.9;
+  color: #fff;
 }
 .card .product-img{
   width: 286px;
-  height: 286px;
+  height: 230px;
   margin: 8px 7px 8px 7px;
   border-radius: 5px;
      
+}
+
+.card-container{
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+.card-container::-webkit-scrollbar {
+  display: inline-block;
+}
+
+.card-container .product-name{
+    font-size: 25px;
+    
+}
+.card-container .product-description{
+  font-family: Gotham;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: justify;
+}
+.card-container .product-quantity{
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+}
+.card-container .product-suplier{
+  font-family: Gotham;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: justify;
+}
+.card-container .product-price{
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.card-container .product-description span{
+    color: rgb(121, 47, 118);
+    font-size: 19px;
+    font-weight: 600;
 }
