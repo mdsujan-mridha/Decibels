@@ -6,6 +6,7 @@ import prfectSectionImg from '../../../images/perfect.png';
 import premiumSectionImg from '../../../images/bose_759944_0020_quietcomfort_35_acoustic_noise_1250648_1_ 1.png';
 import battertySectionImg from '../../../images/guy 1.png';
 import lastSectionImg from '../../../images/last.png'
+import Products from '../../Products/Products';
 
 const Home = () => {
     return (
@@ -45,6 +46,8 @@ const Home = () => {
                 </div>
             </div>
 
+           <Products></Products>
+      
             <div className="Premium-section">
                 <div className="container">
                     <div className="Premium-text-part">

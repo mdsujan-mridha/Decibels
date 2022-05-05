@@ -99,7 +99,7 @@ if(loading){
                         </form>
                     </div>
 
-                    <Link className='text-decoration-none allready-account ' to="/register">  Create a new account  </Link>
+                    <Link className='text-decoration-none allready-account' to="/register">  Create a new account  </Link>
                     <hr className="new1" />
 
                     <SocialLogin></SocialLogin>

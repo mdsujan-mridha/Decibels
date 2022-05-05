@@ -1,0 +1,27 @@
+.products-container{
+    margin-top: 150px;
+}
+.products-title{
+    font-family: Gotham;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+   
+}
+.load-products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin-top: 35px;
+}
+.card-container{
+    margin-left: 7px;
+    margin-right: 7px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+      scrollbar-width: none; 
+}
+.card-container::-webkit-scrollbar {
+    display: inline-block;
+  }
