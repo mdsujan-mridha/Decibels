@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({product}) => {
     console.log(product);
-    const{name,img,quantity,description,supplier,price}= product;
+    const{_id,name,img,quantity,description,supplier,price}= product;
+    console.log(_id);
+
     const[readMore,setReadMore] = useState(true);
     const toggleReadMore = () => {setReadMore(!readMore)};
+
+    const navigate = useNavigate();
+    const updateProduct = id =>{
+
+        navigate(`/product/${id}`);
+    }
 
     return (
         <div>
@@ -28,7 +37,7 @@ const Product = ({product}) => {
                 <h4 className='product-suplier'>  Supplier:{supplier} </h4>
                
                     </div>
-                    <button className='product-update'> Update </button>
+                    <button onClick={()=>updateProduct(_id)} className='product-update'> Update </button>
 
                </div>
            </div>

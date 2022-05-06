@@ -25,7 +25,10 @@ const Header = () => {
       <Nav.Link as = {NavLink} to="products" > Product </Nav.Link>
       {
         user?
-        <Nav.Link as = {NavLink} to="addproduct" > Add New Product </Nav.Link>
+         <div className='d-flex'> 
+            <Nav.Link as = {NavLink} to="addproduct" > Add New Product </Nav.Link> 
+            <Nav.Link as = {NavLink} to ="manageinventory"> Manage Inverntory </Nav.Link>
+         </div>
         :
         ''
       }
