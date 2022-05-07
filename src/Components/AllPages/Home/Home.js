@@ -62,7 +62,7 @@ const Home = () => {
                                     product={product}
                                 ></Product>)
                             }
-                            <Link className='load-all-product' to="/products">   Manage Inventories   </Link>
+                            <Link className='load-all-product' to="/products">   Load All Item   </Link>
 
                         </div>
                     </div>

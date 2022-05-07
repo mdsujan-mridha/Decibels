@@ -23,11 +23,13 @@ const Header = () => {
     <Nav className="me-auto">
       <Nav.Link as = {NavLink} to="home" > Home </Nav.Link>
       <Nav.Link as = {NavLink} to="products" > Product </Nav.Link>
+      
       {
         user?
          <div className='d-flex'> 
             <Nav.Link as = {NavLink} to="addproduct" > Add New Product </Nav.Link> 
             <Nav.Link as = {NavLink} to ="manageinventory"> Manage Inverntory </Nav.Link>
+            <Nav.Link as={NavLink} to ="myitems"> My Items </Nav.Link>
          </div>
         :
         ''
@@ -44,9 +46,14 @@ const Header = () => {
       }
       
 
-      <Nav.Link as={NavLink} to="about">
+      <Nav.Link as={NavLink} to="/about">
         About us
       </Nav.Link>
+      
+      <Nav.Link as={NavLink} to="/blog">
+    Blog
+      </Nav.Link>
+
     </Nav>
   </Navbar.Collapse>
   </Container>

@@ -152,6 +152,7 @@
 
 
 }
+
 .battery-life-section{
     margin-top: 150px;
 }
@@ -263,3 +264,63 @@ transition: 0.3s;
 .load-all-product:hover{
     opacity: 1.0;
 }
+
+@media screen and (max-width: 600px) {
+    .banner-section{
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .text-container-part {
+        padding: 20px;
+    }
+    .text-container-part h1 {
+        font-size: 34px;
+        font-weight: 700;
+    
+    }
+    .img-part {
+
+        padding: 50px;
+    }
+    .perfect-txt-part {
+    
+        margin-top: 80px;
+       
+    }
+
+    .perfect-txt-part h1 {
+      
+        font-size: 44px;
+        font-weight: 700;
+       
+    }
+    .perfect-txt-part p {
+        font-size: 17px;
+        font-weight: 400;
+        text-align: left;
+    }
+    .Premium-section {
+        margin-top: 50px;
+      
+    }
+    .Premium-section h1 {
+        font-size: 44px;
+        text-align: left !important;
+    
+    }
+    .Premium-section p {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+    
+    
+    }
+    .premimu-img-section .premium-img {
+        height: 500px;
+        width: 500px;
+    
+    
+    }
+
+  }

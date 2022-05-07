@@ -7,7 +7,7 @@ const AddNewProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/product`;
+        const url = `https://rocky-brook-78230.herokuapp.com/products`;
         fetch(url, {
 
             method: 'POST',
@@ -27,7 +27,7 @@ const AddNewProduct = () => {
                 else {
                     toast("Your item added!");
                 }
-                result.target.reset();
+              
             });
 
 
@@ -42,6 +42,7 @@ const AddNewProduct = () => {
             <h1 className='text-center'>  Add New Product with new brand </h1>
             <div className="container addProduct-area">
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <input className='name-area-field' placeholder='Your email'  {...register("email", { required: true, maxLength: 30 })} />
                     <input className='name-area-field' placeholder='Enter product name'  {...register("name", { required: true, maxLength: 30 })} />
                     <textarea className='text-area-field' placeholder='Enter product description' {...register("description")} />
                     <input className='price-area-field' placeholder='Enter product Price' type="number" {...register("price")} />

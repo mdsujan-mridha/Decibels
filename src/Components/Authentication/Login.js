@@ -1,24 +1,21 @@
 import React, { useRef } from 'react';
 import { Button, Spinner} from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import SocialLogin from './SocialLogin/SocialLogin';
+import axios from 'axios';
 
 const Login = () => {
-    
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-
-
-
 // <=================password rest =========================> 
 const [sendPasswordResetEmail, 
     sending, 
@@ -27,26 +24,37 @@ const [sendPasswordResetEmail,
 // <================================================================>
     const emailRef = useRef();
     const passwordRef = useRef();
+    const location =useLocation();
+    const navigate = useNavigate();
+    const from = location?.state?.from?.pathname || '/'
 
-    const handleLoginSubmit = (e) =>{
+    
+    const handleLoginSubmit = async e =>{
         e.preventDefault();
+       
         const email = emailRef.current.value;
         const passowrd = passwordRef.current.value;
-        signInWithEmailAndPassword(email,passowrd);
-        
+       await signInWithEmailAndPassword(email,passowrd);
+       const {data} = await axios.post('https://rocky-brook-78230.herokuapp.com/login',{email});
+       localStorage.setItem('accessToken',data.accessToken);
+       navigate(from, {replace:true})
+    
     }
+
+ if(user){
+        // navigate(from, {replace:true})
+
+ }
+
+
 
  /* <====================================================================================================>
   <=================================handle rest passowrd===============================================>
   <====================================================================================================>
 */
 
-const handlePasswordRest = () =>{
-    const email = emailRef.current.value;
-    sendPasswordResetEmail(email);
-    toast('sent email');
-    
-}
+
+
 
 /* <=========================handle error ==========================>
  <=================================================================>
@@ -93,7 +101,7 @@ if(loading){
                             <p className="loadingHandle"> {loadingElement} </p>
                      
                             <input className='login-btn' type="submit" value="Login" />
-                            <Button  onClick={handlePasswordRest} className='text-decoration-none forgot-password' variant="link"> Forget Password?  </Button>
+                            <Button   className='text-decoration-none forgot-password' variant="link"> Forget Password?  </Button>
                            
                             <hr className="new1" />
                         </form>

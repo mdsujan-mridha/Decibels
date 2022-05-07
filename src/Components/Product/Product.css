@@ -6,6 +6,7 @@ transition: 0.3s;
 position: relative;
 
 }
+
 .card:hover{
   box-shadow: 2px 2px 4px 4px rgb(88, 81, 81);
  transform: scale(1.1);
@@ -85,4 +86,21 @@ position: relative;
   
   opacity: 1.0;
 
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    margin-top: 20px;
+    width: 250px;
+ 
+    }
+
+    .card .product-img{
+      width: 236px;
+      height: 230px;
+      margin: 8px 7px 8px 7px;
+      border-radius: 5px;
+         
+    }
+ 
 }

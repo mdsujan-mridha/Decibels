@@ -10,6 +10,10 @@ import Products from './Components/Products/Products';
 import AddNewProduct from './Components/AddNewProduct/AddNewProduct';
 import Inventory from './Components/Inventory/Inventory';
 import ManageInventory from './Components/ManageInventory/ManageInventory';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
+import MyItems from './Components/MyItems/MyItems';
+import NotFound from './Components/NotFound/NotFound';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -22,10 +26,30 @@ function App() {
        <Route path='/register' element={<Register></Register>}></Route>
        <Route path='/products' element={<Products></Products>}></Route>
        <Route path='addproduct' element={<AddNewProduct></AddNewProduct>}></Route>
-       <Route path='/product/:productId' element={<Inventory></Inventory>}></Route>
-       <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+       <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+       <Route path='/product/:productId' element={
+         <RequireAuth>
+           <Inventory></Inventory>
+         </RequireAuth>
+       }></Route>
+      
+       <Route path='manageinventory' element={
+         <RequireAuth>
+           <ManageInventory>
+           </ManageInventory>
+         </RequireAuth>
+       }> </Route> 
 
-        </Routes>
+       <Route path='/blog' element={
+         <RequireAuth>
+                 <Blog></Blog>
+         </RequireAuth>
+       }>
+       </Route>
+        
+       <Route path='/*' element={<NotFound></NotFound>}></Route>
+       
+       </Routes>
          
      <Footer></Footer>
     </div>
