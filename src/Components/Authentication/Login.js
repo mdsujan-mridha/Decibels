@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Spinner} from 'react-bootstrap';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../firebase.init';
@@ -12,7 +12,7 @@ import axios from 'axios';
 const Login = () => {
     const [
         signInWithEmailAndPassword,
-        user,
+        user1,
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
@@ -41,7 +41,7 @@ const [sendPasswordResetEmail,
     
     }
 
- if(user){
+ if(user1){
         // navigate(from, {replace:true})
 
  }
@@ -63,15 +63,16 @@ const [sendPasswordResetEmail,
  if(error){
      errorElement=
     
-         <p>Error:{error.message}</p>
+         <p> password Not Match or no account found:{error.message}</p>
    
  }
- if(error2){
+ else if(error2){
      errorElement=
     
          <p>Error:{error2.message}</p>
    
  }
+
 
  /* <=========================handle loading ==========================>
  <=================================================================>

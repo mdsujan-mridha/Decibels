@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-4 left-corner">
                         <h3 className='text-center mt-5'> About </h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur voluptates dolor ipsa ipsam inventore, expedita voluptas obcaecati quo soluta. Possimus incidunt ex accusamus ipsam deserunt, dolore officiis quos dolorum. </p>
+                        <p> The decibel is a relative unit of measurement equal to one tenth of a bel. It expresses the ratio of two values of a power or root-power quantity on a logarithmic scale.  </p>
                     </div>
                     <div className="col-12 col-md-6 col-lg-4 middle-corner">
                         <h3 className='text-center mt-5'> Quick Link </h3>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copy-right">
-                    <h5 className='text-center'> Copyright @ 2022 developer suj@n </h5>
+                    <h5 className='text-center'> Copyright @ 2022 developer SS </h5>
                 </div>
             </div>
 

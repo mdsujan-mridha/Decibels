@@ -1,9 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form'
 import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../firebase.init';
 import './AddNewProduct.css'
 
 const AddNewProduct = () => {
+    const [user] = useAuthState(auth)
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
@@ -27,7 +30,7 @@ const AddNewProduct = () => {
                 else {
                     toast("Your item added!");
                 }
-              
+
             });
 
 
@@ -42,7 +45,7 @@ const AddNewProduct = () => {
             <h1 className='text-center'>  Add New Product with new brand </h1>
             <div className="container addProduct-area">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className='name-area-field' placeholder='Your email'  {...register("email", { required: true, maxLength: 30 })} />
+                    <input className='name-area-field' placeholder='Your email' {...register("email", { required: true, maxLength: 30 })} />
                     <input className='name-area-field' placeholder='Enter product name'  {...register("name", { required: true, maxLength: 30 })} />
                     <textarea className='text-area-field' placeholder='Enter product description' {...register("description")} />
                     <input className='price-area-field' placeholder='Enter product Price' type="number" {...register("price")} />
