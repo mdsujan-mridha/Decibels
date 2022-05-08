@@ -35,7 +35,7 @@ const [sendPasswordResetEmail,
         const email = emailRef.current.value;
         const passowrd = passwordRef.current.value;
        await signInWithEmailAndPassword(email,passowrd);
-       const {data} = await axios.post('http://localhost:5000/login',{email});
+       const {data} = await axios.post('https://rocky-brook-78230.herokuapp.com/login',{email});
        localStorage.setItem('accessToken',data.accessToken);
        navigate(from, {replace:true})
           console.log(email);
