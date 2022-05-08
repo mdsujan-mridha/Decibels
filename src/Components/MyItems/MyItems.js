@@ -17,7 +17,7 @@ const MyItems = () => {
 
         const procced = window.confirm("Are your sure?")
         if(procced){
-          const url = `http://localhost:5000/products/${id}`;
+          const url = `https://rocky-brook-78230.herokuapp.com/products/${id}`;
           fetch(url, {
               method:'DELETE'
           })
@@ -37,7 +37,7 @@ const MyItems = () => {
          const getMyItems = async()=>{
              const email = user?.email;
               // console.log(email);
-            const url = `http://localhost:5000/myitems?email=${email}`;
+            const url = `https://rocky-brook-78230.herokuapp.com/myitems?email=${email}`;
            if(email){
             const {data} = await axios.get(url,{
               
