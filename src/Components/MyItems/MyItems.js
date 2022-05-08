@@ -8,16 +8,16 @@ import useProducts from '../CustomHooks/UseProducts';
 const MyItems = () => {
   const[products,setProducts] = useProducts();
     const [user] = useAuthState(auth);
-    console.log(user);
+    // console.log(user);
     const [myItem,setMyItem] = useState([]);
 
-      // console.log(myItem);
+      console.log(myItem);
 
       const handleDelete = id =>{
 
         const procced = window.confirm("Are your sure?")
         if(procced){
-          const url = `https://rocky-brook-78230.herokuapp.com/products/${id}`;
+          const url = `http://localhost:5000/products/${id}`;
           fetch(url, {
               method:'DELETE'
           })
@@ -36,26 +36,24 @@ const MyItems = () => {
     useEffect( () =>{
          const getMyItems = async()=>{
              const email = user?.email;
-              console.log(email);
-            const url = `https://rocky-brook-78230.herokuapp.com/myitems?email=${email}`;
-           const {data} = await axios.get(url,{
+              // console.log(email);
+            const url = `http://localhost:5000/myitems?email=${email}`;
+           if(email){
+            const {data} = await axios.get(url,{
               
-             headers: {
-                 authorization:`Bearer ${localStorage.getItem('accessToken')}`
-             }
-
-           });
-           setMyItem(data);
+              headers: {
+                authorization:`Bearer ${localStorage.getItem('accessToken')}`
+              }
+ 
+            });
+            console.log(data);
+            setMyItem(data);
+           }
          }
 
          getMyItems();
         
     } ,[user]);
-
-
-    
-
-
     return (
         <div>
             <h1 className="text-center mt-5 my-items-title mb-5">  My Items  </h1>

@@ -14,7 +14,7 @@ function removeOne() {
     const newProduct = { ...product, quantity: newQuantity }
     //copy all previous data if exist in product and setup new quantity 
     setProduct(newProduct);
-    fetch(`https://rocky-brook-78230.herokuapp.com/products/${productId}`, {
+    fetch(`http://localhost:5000/products/${productId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

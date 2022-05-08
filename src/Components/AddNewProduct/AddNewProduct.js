@@ -10,7 +10,7 @@ const AddNewProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `https://rocky-brook-78230.herokuapp.com/products`;
+        const url = `http://localhost:5000/products`;
         fetch(url, {
 
             method: 'POST',
