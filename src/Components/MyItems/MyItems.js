@@ -8,7 +8,7 @@ import useProducts from '../CustomHooks/UseProducts';
 const MyItems = () => {
   const[products,setProducts] = useProducts();
     const [user] = useAuthState(auth);
-    // console.log(user);
+    console.log(user);
     const [myItem,setMyItem] = useState([]);
 
       // console.log(myItem);
